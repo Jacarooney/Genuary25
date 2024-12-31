@@ -1,0 +1,569 @@
+:root {
+    --bg: antiquewhite;
+    --h1: black;
+    --boxbg: whitesmoke;
+    --txt: black;
+    --pop: rgb(255, 166, 0);
+    --antipop: rgb(126, 183, 248);
+  }
+
+html, body {
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition-property: 'background';
+    transition-duration: 0.8s;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 200vw;
+    justify-content: space-evenly;
+    transition: all 1s;
+    align-items: start;
+}
+
+#list-page{
+    /* position: relative; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-wrap: wrap;
+    width: 90vw;
+    /* transform: translate(0, 0); */
+    /* left: 0%; */
+    /* background-color: var(--bg); */
+}
+
+#heading {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+h1 {
+    position: relative;
+    color: var(--h1);
+    font-family: "Oi";
+    font-weight: 1;
+    font-size: 4.1em;
+    line-height: 1em;
+    text-align: center;
+}
+
+@media (width < 1050px) {
+    h1{
+        font-size: 6.2vw;
+    }
+}
+
+@media (width < 800px) {
+    h1{
+        font-size: 4.1em;
+    }
+}
+
+h5 {
+    position: relative;
+    font-size: 0.9em;
+    /* text-transform: capitalize; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 350;
+    width: auto;
+    padding: 1em;
+    letter-spacing: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1em;
+    text-align: center;
+    text-justify: inter-word;
+    border: 1px solid var(--txt);
+    border-radius: 0.5em;
+
+    background:
+    linear-gradient(
+      to right,
+      var(--pop),
+      var(--pop)
+    ),
+    linear-gradient(
+      to right,
+      hsl(314, 100%, 77%),
+      hsl(223, 100%, 63%)
+  );
+  background-size: 100% 100%, 100% 0%;
+  background-position: 100% 100%, 100% 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+
+}
+
+h5:hover {
+    background-size: 100% 0%, 100% 100%;
+  }
+
+
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    font-family: "Open Sans";
+    text-align: left;
+}
+
+#about {
+    padding-bottom: 5em;
+}
+
+@media (width >= 850px) {
+    .columns {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    #about {
+        width: 45%;
+        margin-right: 2em;
+    }
+    
+    #prompts {
+        width: 45%;
+    }
+
+    .thinker {
+        position: absolute;
+        width: 4em;
+        height: 4em;
+        left: 50%;
+        bottom: 0;
+        transform:  translate(-50%, 50%);
+        fill: rgb(0, 20, 99);
+        box-shadow: var(--txt) 0.2em 0.2em;
+        background: var(--antipop);
+        border: 3px solid rgb(0, 20, 99);
+        border-radius: 50%;
+        padding: 1em;
+        z-index: 10;
+    }
+}
+
+@media (width < 850px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about {
+        width: 90%;
+        margin-bottom: 2em;
+    }
+    
+    #prompts {
+        width: 90%;
+    }
+
+    .thinker {
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+.cool-box {
+    border: 3px double var(--txt);
+    border-radius: 0.5em;
+    padding: 3em;
+    box-shadow: var(--txt) 0.6em 0.6em;
+    background: var(--boxbg);
+    padding-top: 1em;
+    position: relative;
+}
+
+.thinker {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    left: 50%;
+    bottom: 0;
+    transform:  translate(-50%, 50%);
+    fill: rgb(0, 0, 0);
+    box-shadow: var(--txt) 0.2em 0.3em;
+    background: var(--antipop);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 1em;
+    z-index: 10;
+}
+
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-family: "Bricolage Grotesque";
+    font-size: 1.8em;
+    text-align: left;
+    margin-left: 0.7em;
+}
+
+hr.solid {
+    border-top: 1px solid var(--txt);
+    width: 93.5%;
+    left: 0;
+    opacity: 0.4;
+}
+
+h4 {
+    font-weight: 200;   
+    font-size: 1.2em;
+    font-family: "Lexend";
+    line-height: 1.5em;
+    margin: 1em;
+    /* height: fit-content;
+    text-align: justify;
+    text-justify: inter-word; */
+}
+
+a {
+    color:var(--pop);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a:hover {
+    color: cornflowerblue;
+    font-weight: 360;
+}
+
+ol {
+    /* width: 45%; */
+    /* text-align: left; */
+    font-size: 1em;
+    list-style-position: inside;
+    margin: 1em;
+    padding: 0;
+}
+
+li{
+    padding: 0.2em;
+    font-weight: 200;   
+    font-size: 1.2em;
+    font-family: "Lexend";
+    line-height: 1.5em;
+    transition: color, 0.3s;
+    /* text-decoration:line-through; */
+    color: var(--txt);
+}
+
+li.active{
+    font-weight: 300; 
+    color: var(--pop);
+    text-decoration: none;
+}
+
+li.active:hover{
+    cursor: pointer;
+    font-weight: 400;
+    color:var(--antipop);
+    transition: color, 0.3s;
+}
+
+#canvas-page{
+    /* position: absolute; */
+    width: 100vw;
+    transition-duration: 0s;
+    height: 100vh;
+    /* transition-property: left; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    /* transform: translate(0, 50vh); */
+    left: 100%;
+    /* top: -50vh; */
+}
+
+#back-button{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.6em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--boxbg);
+    border-radius: 100%;
+    font-family:monospace;
+    border: 2px dotted var(--txt);
+    width: 1.8em;
+    height: 1.8em;
+    text-align: left;
+    font-size: 1.6em;
+}
+
+#back-button:hover{
+    background-color: var(--txt);
+    border-color: var(--boxbg);
+    color: var(--boxbg);
+    cursor: pointer;
+}
+
+#canvas-left{
+    /* background-color: goldenrod; */
+    position: relative;
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s;
+    /* transition-duration: 0s; */
+    justify-content: space-evenly;
+}
+
+#title{
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+}
+
+iframe {
+    position: relative;
+    top: 0px;
+    border: none;
+    width: 80%;
+    margin: 10% 10%;
+    height: 80%;
+    overflow: hidden;
+    opacity: 0%;
+    transition-property: all;
+    transition-duration: 2.5s;
+}
+canvas {
+    margin: auto;
+}
+
+#canvas-right{
+    /* background-color: cadetblue; */
+    position: relative;
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+#info-box{
+    position: relative;
+    width: 30vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: fit-content;
+    transition: all 1s;
+}
+
+#prompt {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    color: var(--h1);
+    font-family: "Bricolage Grotesque";
+    font-size: 1.9em;
+    margin-bottom: 0.2em;
+}
+
+p{
+    padding: 1.2em;
+    width: auto;
+    /* text-align: justify; */
+    font-weight: 200;   
+    font-size: 0.9em;
+    font-family: "Lexend";
+    line-height: 1.5em;
+    margin: 1em;
+}
+ p a{
+    word-wrap: break-word;
+ }
+
+#info-button{
+    z-index: 20;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left:0;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--boxbg);
+    border-radius: 100%;
+    border: 2px dotted var(--txt);
+    font-family:monospace;
+    width: 1.8em;
+    height: 1.8em;
+    text-align: left;
+    font-size: 1.6em;
+    transition: transform 1.1s ;
+}
+
+#info-button:hover{
+    background-color: var(--txt);
+    color: var(--boxbg);
+    cursor: pointer;
+    border-color: var(--boxbg);
+}
+
+@media (width >= 1050px){
+    #canvas-page{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    #canvas-right{
+        /* background-color: cadetblue; */
+        width: 40vw;
+        height: 100vh;
+
+    }
+    #info-box{
+        position: relative;
+        width: 30vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        height: fit-content;
+        transform: translate(0, 0);
+    }
+
+    #info-button{
+        left:0;
+        top:50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (width < 1050px){
+    #canvas-page{
+        display: flex;
+        flex-direction: column;
+        /* width: 100vw; */
+        align-items: center;
+        height: 100vh;
+        transform: rotate(0deg);
+    }
+
+    #canvas-right{
+        width: 0;
+        height: 0;
+    }
+    #info-box{
+        position: fixed;
+        top:0vh;
+        width: 60vw;
+        transform: translate(0, 45vh);
+        transition: all 1s;
+    }
+
+    #info-button{
+        left:50%;
+        top:0%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+
+/* TOGGLE BY https://codepen.io/justin-schroeder/pen/zYyVvxQ */
+
+
+.toggle {
+    font-size: 0.9rem; /* 👈 change this to scale */
+    border: 2px double currentColor;
+    border-radius: 2em;
+    cursor: pointer;
+    display: block;
+    height: 2em;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    width: 3.75em;
+    background: var(--boxbg);
+    border-color: var(--txt);
+  }
+  .toggle span {
+    border-radius: 2em;
+    display: block;
+    height: 1.3em;
+    left: .2em;
+    overflow: hidden;
+    position: absolute;
+    top: .2em;
+    text-indent: -9999px;
+    transition: left .25s;
+    width: 1.3em;
+    z-index: 2;
+    background: red;
+    background: var(--boxbg);
+    border: 2px double black;
+  }
+  
+  .toggle::before,
+  .toggle::after {
+    content: '';
+    display: block;
+    border-radius: 1em;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .toggle::after {
+    box-shadow: .25em .25em rgb(0, 157, 255);
+    height: 1.125em;
+    right: .9em;
+    top: .125em;
+    width: 1.125em;
+  }
+  
+  .toggle::before {
+    background-color: rgb(255, 166, 0);
+    height: .625em;
+    outline: .25em dotted rgb(255, 166, 0);
+    outline-offset: .125em;
+    left: .7em;
+    top: .7em;
+    width: .625em;
+  }
+  
+  input:checked ~ .toggle span {
+    left: 2em;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .sr-only {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+  }
+  
