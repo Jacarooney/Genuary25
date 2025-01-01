@@ -329,6 +329,7 @@ li.active:hover{
 
 #canvas-left{
     position: relative;
+    z-index: 1000;
     width: 60vw;
     height: 100vh;
     display: flex;
@@ -344,6 +345,7 @@ li.active:hover{
 }
 
 iframe {
+    z-index: 1000;
     position: relative;
     top: 0px;
     border: none;
