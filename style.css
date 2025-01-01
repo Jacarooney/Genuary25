@@ -40,6 +40,7 @@ html, body {
 
 #heading {
     display: flex;
+    /* display: inline-block; */
     position: relative;
     flex-direction: row;
     justify-content: center;
@@ -55,6 +56,8 @@ h1 {
     font-size: 4.1em;
     line-height: 1em;
     text-align: center;
+    width: 100%;
+    /* width: auto; */
 }
 
 @media (width < 1050px) {
@@ -66,6 +69,12 @@ h1 {
 @media (width < 800px) {
     h1{
         font-size: 4.1em;
+    }
+}
+
+@media (width < 800px) {
+    body{
+        font-size: 2.8vw;
     }
 }
 
@@ -161,6 +170,10 @@ h5:hover {
     }
 
     #about {
+        padding-bottom: 2em;
+    }
+
+    #about {
         width: 90%;
         margin-bottom: 2em;
     }
@@ -182,6 +195,7 @@ h5:hover {
     box-shadow: var(--txt) 0.6em 0.6em;
     background: var(--boxbg);
     padding-top: 1em;
+    padding-bottom: 0.5em;
     position: relative;
 }
 
@@ -314,7 +328,6 @@ li.active:hover{
 }
 
 #canvas-left{
-    /* background-color: goldenrod; */
     position: relative;
     width: 60vw;
     height: 100vh;
@@ -322,8 +335,7 @@ li.active:hover{
     flex-direction: column;
     align-items: center;
     transition: all 1s;
-    /* transition-duration: 0s; */
-    justify-content: space-evenly;
+    justify-content:start;
 }
 
 #title{
@@ -335,20 +347,16 @@ iframe {
     position: relative;
     top: 0px;
     border: none;
-    width: 80%;
+    width: 95%;
     margin: 10% 10%;
-    height: 80%;
+    height: 50%;
     overflow: hidden;
     opacity: 0%;
     transition-property: all;
     transition-duration: 2.5s;
 }
-canvas {
-    margin: auto;
-}
 
 #canvas-right{
-    /* background-color: cadetblue; */
     position: relative;
     width: 40vw;
     height: 100vh;
@@ -365,6 +373,7 @@ canvas {
     margin-right: 5vw;
     height: fit-content;
     transition: all 1s;
+    padding-bottom:0;
 }
 
 #prompt {
@@ -464,18 +473,32 @@ p{
         width: 0;
         height: 0;
     }
+
+    #canvas-left{
+        width: 92vw;
+        /* justify-items: start; */
+    }
     #info-box{
         position: fixed;
         top:0vh;
         width: 60vw;
-        transform: translate(0, 45vh);
+        transform: translate(0, 52vh);
         transition: all 1s;
+    }
+
+    #blurb {
+        padding: 0;
+        margin: 10%;
     }
 
     #info-button{
         left:50%;
         top:0%;
         transform: translate(-50%, -50%);
+    }
+
+    #back-button{
+        margin: 0.3em;
     }
 
 }
@@ -493,8 +516,8 @@ p{
     display: block;
     height: 2em;
     right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
+    bottom: 1.6vw;
+    /* transform: translate(0, 50%); */
     position: absolute;
     width: 3.75em;
     background: var(--boxbg);
