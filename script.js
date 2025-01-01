@@ -235,9 +235,13 @@ function goCanvas(i){
 }
 
 var urlHash = location.hash;
+var currentDay = 1;
 
 if (urlHash && urlHash != '#home'){
-    goCanvas(urlHash.slice(-1)-1);
+    let num = urlHash.slice(-1);
+    if (num <= currentDay){
+        goCanvas(num-1);
+    }
 }
 
 for (let i = 0; i < listItems.length; i++){
