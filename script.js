@@ -4,33 +4,9 @@ var listItems = document.querySelectorAll(".active");
 
 var currentSketch;
 
-for (let i = 0; i < listItems.length; i++){
-    listItems[i].onclick = function(e) {
-        document.getElementById("prompt").innerText = this.innerText;
-        document.getElementById("title").innerText = titles[i];
-        document.getElementById("title").style.color = titleCols[i];
-        document.getElementById("blurb").innerHTML = blurbs[i];
-        // root.style.setProperty('--bg', bgCols[i]);
-
-        if (bgCols[i] == 'light'){
-            goLight();
-        } else {
-            goDark();
-        }
-
-        window.scrollTo(0, 0);
-
-        moveDiv("wrapper", -100);
-
-        document.getElementById("frame").style.opacity = "100%";
-        document.getElementById("frame").style.transitionDuration = "3s";
-        document.getElementById("frame").src = "Sketches/gen"+(i+1)+"/index.html";
-        
-    }
-}
-
 function goBack(){
     moveDiv("wrapper", 0);
+    location.hash = 'home';
     root.style.setProperty('--bg', 'antiquewhite');
     document.getElementById("frame").style.transitionDuration = "0.25s";
     document.getElementById("frame").style.opacity = "0%";
@@ -115,6 +91,7 @@ window.addEventListener("resize", function() {
         var element3 = document.getElementById('info-button');
         // var element4 = document.getElementById('canvas-page');
         // element4.style.height = "100vh";
+
         if(!infoToggle){
             element3.innerText = "▼";
             element2.style.transform = "translate(0, 53vh)";
@@ -159,7 +136,7 @@ let bgCols = ['light', 'light', 'dark', 'dark'];
 
 let titleCols = ['black', 'black', 'white', 'white'];
 
-let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black and Black)"];
+let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)"];
 
 let blurbs = [
     `This prompt made me think of drawings composed of only vertical lines. Snooping around the web, I found <a target="_blank" href="https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/449775586_17982303353693950_1649366445359233739_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTUuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=uxFHuyjB3fwQ7kNvgFtOasu&_nc_gid=22dccbc30fb347adad556d8c977a07fa&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzQwNDYzMTc5NTg4NDcyOTc4Mg%3D%3D.3-ccb7-5&oh=00_AYB2DXKJg13vTtopCl8r_A10M_RPHEwfQYk0_p7RfPGUNg&oe=6778AC8D&_nc_sid=10d13b">a cool drawing</a> by <a target="_blank" href="https://www.threads.net/@jimmywongstudio">Jimmy Wong</a>.<br><br>I went for a more simplified approach to textures, but tried to capture the general gist of his composition. Click on the sketch to generate a new, random iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2"> https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2</a>`,
@@ -233,4 +210,38 @@ function detectColorScheme(){
             goLight();
             document.getElementById("darkmode-toggle").checked = false;
         }
+}
+
+function goCanvas(i){
+    document.getElementById("prompt").innerText = this.innerText;
+    document.getElementById("title").innerText = titles[i];
+    document.getElementById("title").style.color = titleCols[i];
+    document.getElementById("blurb").innerHTML = blurbs[i];
+    location.hash = 'gen'+(i+1);
+
+    if (bgCols[i] == 'light'){
+        goLight();
+    } else {
+        goDark();
+    }
+
+    window.scrollTo(0, 0);
+
+    moveDiv("wrapper", -100);
+
+    document.getElementById("frame").style.opacity = "100%";
+    document.getElementById("frame").style.transitionDuration = "3s";
+    document.getElementById("frame").src = "Sketches/gen"+(i+1)+"/index.html";
+}
+
+var urlHash = location.hash;
+
+if (urlHash && urlHash != '#home'){
+    goCanvas(urlHash.slice(-1)-1);
+}
+
+for (let i = 0; i < listItems.length; i++){
+    listItems[i].onclick = function(e) {
+        goCanvas(i);
+    }
 }
