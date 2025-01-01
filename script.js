@@ -146,6 +146,39 @@ let blurbs = [
 ...gee, I sure hope it isn't.<br><br>Anyways, this one was obviously inspired by Rothko. Click the canvas to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/qoDUv6USR">https://editor.p5js.org/jacarooney/sketches/qoDUv6USR</a>`,
 ]
 
+let prompts = [
+    "Vertical or horizontal lines only.",
+    "Layers upon layers upon layers.",
+    "Exactly 42 lines of code.",
+    "Black on black.",
+    "Isometric Art - (No vanishing points).",
+    "Make a landscape using only primitive shapes.",
+    "Use software that is not intended to create art or images.",
+    "Draw one million of something.",
+    "The textile design patterns of public transport seating.",
+    "You can only use TAU in your code, no other number allowed.",
+    "Impossible day - Try to do something that feels impossible for you to do...",
+    "Subdivision.",
+    "Triangles and nothing else.",
+    "Pure black and white. No gray.",
+    "Design a rug.",
+    "Generative palette.",
+    "What happens if pi=4?",
+    "What does wind look like?",
+    "Op Art.",
+    "Generative Architecture.",
+    "Create a collision detection system (no libraries allowed).",
+    "Gradients only.",
+    "Inspired by brutalism.",
+    "Geometric art - pick either a circle, rectangle, or triangle and use only that geometric shape.",
+    "One line that may or may not intersect itself",
+    "Symmetry.",
+    "Make something interesting with no randomness or noise or trig.",
+    "Infinite Scroll.",
+    "Grid-based graphic design.",
+    "Abstract map.",
+    "Pixel sorting."]
+
 
 function goDark(){
     root.style.setProperty('--bg', 'rgb(22,24,24)');
@@ -213,7 +246,7 @@ function detectColorScheme(){
 }
 
 function goCanvas(i){
-    document.getElementById("prompt").innerText = this.innerText;
+    document.getElementById("prompt").innerText = prompts[i];
     document.getElementById("title").innerText = titles[i];
     document.getElementById("title").style.color = titleCols[i];
     document.getElementById("blurb").innerHTML = blurbs[i];
