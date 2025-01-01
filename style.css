@@ -328,8 +328,8 @@ li.active:hover{
 }
 
 #canvas-left{
-    position: relative;
     z-index: 1000;
+    position: relative;
     width: 60vw;
     height: 100vh;
     display: flex;
@@ -345,7 +345,6 @@ li.active:hover{
 }
 
 iframe {
-    z-index: 1000;
     position: relative;
     top: 0px;
     border: none;
@@ -406,7 +405,7 @@ p{
  }
 
 #info-button{
-    z-index: 20;
+    z-index: 2000;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -446,6 +445,7 @@ p{
 
     }
     #info-box{
+        z-index: 2000;
         position: relative;
         width: 30vw;
         margin-left: 5vw;
@@ -458,6 +458,10 @@ p{
         left:0;
         top:50%;
         transform: translate(-50%, -50%);
+    }
+
+    #canvas-left{
+        z-index: 1000;
     }
 }
 
@@ -478,6 +482,7 @@ p{
 
     #canvas-left{
         width: 92vw;
+        z-index: -1;
         /* justify-items: start; */
     }
     #info-box{
