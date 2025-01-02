@@ -268,7 +268,7 @@ function goCanvas(i){
 }
 
 var urlHash = location.hash;
-var currentDay = 1;
+var currentDay = 2;
 
 if (urlHash && urlHash != '#home'){
     let num = urlHash.slice(-1);
