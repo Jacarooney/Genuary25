@@ -122,7 +122,7 @@ function setup() {
       walkers.push(new Walker(x, y, x1, x2, y1, y2, c, v, s, o));
     }
     
-    r = random(18, 22);
+    r = random(15, 20);
     
     c = [
         r+random(-0.2, 0.5), 
@@ -141,7 +141,7 @@ function setup() {
       let s = random(h/30, h/25);
       let v = random(2, 10);
   
-      sweepers.push(new Sweeper(x, y, x1, x2, y1, y2, c, v, s, random(4, 8)));
+      sweepers.push(new Sweeper(x, y, x1, x2, y1, y2, c, v, s, random(4, 7)));
     }
     
   }
