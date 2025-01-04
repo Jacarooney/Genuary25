@@ -2,31 +2,57 @@ let walkers = [];
 
 let bgWalkers = [];
 
+let sweepers = [];
+
 let timeLapseRate = 1;
 
 let fg;
 
 let restartFrame = 0;
 
-let count = 6;
+let count = 10;
 let counter = count;
 
 let numFields, margin, padding;
 let fieldYs = [];
 
-function mousePressed(){
-  count = 6;
+function windowResized(){
+  let side = min(windowWidth, windowHeight);
+  resizeCanvas(side*0.9, side*0.9);
+  noLoop();
+  count = 10;
   counter = count;
   restartFrame = frameCount;
   walkers = [];
   bgWalkers = [];
   fieldYs = [];
+  sweepers = [];
+  setup();
+
+  noStroke();
+  fill(0);
+  textFont('georgia');
+  textSize(side*0.07);
+  // background('antiqueWhite');
+  textAlign(CENTER, CENTER);
+  text("Click to generate new", width/2, height/2);
+}
+
+function mousePressed(){
+  count = 10;
+  counter = count;
+  restartFrame = frameCount;
+  walkers = [];
+  bgWalkers = [];
+  fieldYs = [];
+  sweepers = [];
   setup();
   loop();
 }
 
 function setup() {
-  createCanvas(600, 600);
+  let side = min(windowWidth, windowHeight);
+  createCanvas(side*0.9, side*0.9);
   // background('antiquewhite');
   angleMode(DEGREES);
   rectMode(CENTER);
@@ -41,9 +67,9 @@ function setup() {
     margin = random(width/5, width/3);
     fieldYs[0] = margin;
   } else {
-    margin = random(width/8, width/5);
+    margin = random(width/5.5, width/4);
   }
-  padding = random(5, 30);
+  padding = random(width/40, width/10);
  
   // line(0, margin, width, margin);
   // line(0, height-margin, width, height-margin);
@@ -73,15 +99,17 @@ function setup() {
     }
     
     // rect(width / 2-w/2, fieldYs[i], w, h);
-    let r = random(8, 24);
+    let r = random(15, 23);
     
     let c = [
-        r+random(-8, 8),
-        r+random(-5, 5),
-      r+random(-5, 5)
+        r+random(-5, 8),
+        r+random(-6, 6),
+      r+random(-5, 8)
       ];
+    
+    let o = random(2, 4);
 
-    for (let j = 0; j < 200; j++){
+    for (let j = 0; j < h*0.7; j++){
        let x1 = width/2 - w/2;
     let x2 = width/2 + w/2;
     let x = random(x1, x2);
@@ -89,20 +117,42 @@ function setup() {
     let y1 = fieldYs[i];
     let y2 = fieldYs[i] + h;
     let y = random(y1, y2);
-      let s = random(3, h/17);
+      let s = random(3, min(h/2, 10));
       let v = random(2, 10);
-      walkers.push(new Walker(x, y, x1, x2, y1, y2, c, v, s, random(1, 7)));
+      walkers.push(new Walker(x, y, x1, x2, y1, y2, c, v, s, o));
+    }
+    
+    r = random(18, 22);
+    
+    c = [
+        r+random(-0.2, 0.5), 
+      r,
+      r+random(-0.2, 0.5)
+      ];
+    
+    for (let j = 0; j < 1; j++){
+       let x1 = width/2 - w/2;
+    let x2 = width/2 + w/2;
+    let x = random(x1, x2);
+    
+    let y1 = fieldYs[i];
+    let y2 = fieldYs[i] + h;
+    let y = random(y1, y2);
+      let s = random(h/30, h/25);
+      let v = random(2, 10);
+  
+      sweepers.push(new Sweeper(x, y, x1, x2, y1, y2, c, v, s, random(4, 8)));
     }
     
   }
   
   //BACKGROUND WALKERs
-  let r = random(10, 25);
+  let r = random(8, 15);
     
     let c = [
-        r+random(-8, 8),
+        r+random(-8, 2),
         r+random(-2, 2),
-        r+random(-8, 8)
+        r+random(-8, 2)
       ];
   for (let i = 0; i < 1500; i++) {
     let x = random(width);
@@ -111,7 +161,7 @@ function setup() {
   
   let v = random(10, 20);
   let s = random(5, 20);
-  bgWalkers.push(new Walker(x, y, margin/4, width-margin/4, margin/4, height-margin/4, c, v, s, random(5, 8)));
+  bgWalkers.push(new Walker(x, y, margin/4, width-margin/4, margin/4, height-margin/4, c, v, s, random(1, 4)));
   }
   
   noStroke();
@@ -123,6 +173,10 @@ function draw() {
   for (let i = 0; i < timeLapseRate; i++){
     for (let w of walkers){
       w.walk(fg);
+    }
+    
+    for (let s of sweepers){
+      s.sweep(fg);
     }
 
     for (let b of bgWalkers){
@@ -180,7 +234,7 @@ class Walker {
   
   walk(context){
     
-    let colour = [this.c[0]+random(-5, 5), this.c[1]+random(-5, 5), this.c[2]+random(-5, 5), this.a+random(-5, 5)];
+    let colour = [this.c[0]+random(-7, 5), this.c[1]+random(-7, 4), this.c[2]+random(-7, 5), this.a+random(-2, 1)];
     
     //Move
     this.x += random(-1*this.v, this.v);
@@ -198,5 +252,49 @@ class Walker {
     
     brush(this.x, this.y, this.s, context, colour);
     
+  }
+}
+
+class Sweeper {
+  constructor(x, y, startX, endX, startY, endY, colour, velocity, size, alp){
+    this.x = x;
+    this.y = y;
+    this.x1 = startX;
+    this.x2 = endX;
+    this.y1 = startY;
+    this.y2 = endY;
+    this.w = endX-startX;
+    this.h = endY-startY;
+    this.c = colour;
+    this.v = velocity;
+    this.s = size;
+    this.a = alp;
+  }
+  
+  sweep(context){
+  
+    let rOff = random(-2, 3);
+    
+    // let colour = [...this.c, this.a];
+    let colour = [this.c[0]+rOff, this.c[1]+rOff, this.c[2]+rOff, this.a+random(-2, 2)];
+    
+    //Move
+    // this.x += (noise(frameCount*0.0001+10000*this.x) - 0.48)*this.w/3;
+    this.x += (noise(frameCount*0.0001+10000*this.x) - 0.48)*this.s*20;
+    
+    //Wrap
+    // if (this.x < this.x1 || this.x > this.x2) {
+    //   this.x = noise(frameCount*0.1+300*this.x1)*this.w;
+    // }
+    if (this.x < this.x1){
+      this.x = random(this.x1, this.x2);
+    }
+    if (this.x > this.x2){
+      this.x = random(this.x1, this.x2);
+    }
+    
+    for (let i = 0; i < this.h/this.s/4; i++){
+      brush(this.x, random(this.y1+this.h/50, this.y2), this.s, context, colour);
+    }
   }
 }
