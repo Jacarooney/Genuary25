@@ -896,3 +896,15 @@ function dlu() {
     endShape(CLOSE);
   }
 }
+
+function windowResized(){
+  let side = min(windowWidth, windowHeight);
+  resizeCanvas(side*0.9, side*0.9);
+  noStroke();
+  fill(255);
+  textFont('georgia');
+  textSize(side*0.07);
+  // background('antiqueWhite');
+  textAlign(CENTER, CENTER);
+  text("Click to generate new", width/2, height/2);
+}
