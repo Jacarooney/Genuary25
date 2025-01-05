@@ -132,18 +132,19 @@ function removeClass(Id, className) {
     element.classList.remove(className);
 }
 
-let bgCols = ['light', 'light', 'dark', 'dark'];
+let bgCols = ['light', 'light', 'dark', 'dark', 'dark'];
 
-let titleCols = ['black', 'black', 'white', 'white'];
+let titleCols = ['black', 'black', 'white', 'white', 'white'];
 
-let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)"];
+let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures"];
 
 let blurbs = [
     `This prompt made me think of drawings composed of only vertical lines. Snooping around the web, I found <a target="_blank" href="https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/449775586_17982303353693950_1649366445359233739_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTUuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=uxFHuyjB3fwQ7kNvgFtOasu&_nc_gid=22dccbc30fb347adad556d8c977a07fa&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzQwNDYzMTc5NTg4NDcyOTc4Mg%3D%3D.3-ccb7-5&oh=00_AYB2DXKJg13vTtopCl8r_A10M_RPHEwfQYk0_p7RfPGUNg&oe=6778AC8D&_nc_sid=10d13b">a cool drawing</a> by <a target="_blank" href="https://www.threads.net/@jimmywongstudio">Jimmy Wong</a>.<br><br>I went for a more simplified approach to textures, but tried to capture the general gist of his composition. Click on the sketch to generate a new, random iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2"> https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2</a>`,
     `Having just returned from a month long trip to the cold and dreary UK (it was lovely), this prompt brought rugging-up-for-the-winter to mind.<br><br>Perhaps not the most appropriate clothing choices for winter, you can add layers to Larry here by clicking on his legs, torso, or head (and remove by right-clicking). If you exit and re-enter this page, he will also likely have a different hair-do and flesh tone.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ytdyyEAcj">https://editor.p5js.org/jacarooney/sketches/ytdyyEAcj</a>`,
-    `This one is quite self-explanatory. Forty-two polynucleotide strands. Twenty-one helices of DNA floatin' around.<br><br>But this was no cop-out! The source code is exactly 42 lines long!<br><br>Look-a here:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/MTldScyPC">https://editor.p5js.org/jacarooney/sketches/MTldScyPC</a>`,
+    `This one is quite self-explanatory. Forty-two polynucleotide strands. Twenty-one strands of DNA floatin' around.<br><br>But this was no cop-out! The source code is exactly 42 lines long!<br><br>Look-a here:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/MTldScyPC">https://editor.p5js.org/jacarooney/sketches/MTldScyPC</a>`,
     `"I would like to say to those who think of my pictures as serene, whether in friendship or mere observation, that I have imprisoned the most utter violence in every inch of their surface." ― Mark Rothko<br><br>I don't think my code is imbuing it's output with utter violence...<br><br>
 ...gee, I sure hope it isn't.<br><br>Anyways, this one was obviously inspired by Rothko. Click the canvas to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/qoDUv6USR">https://editor.p5js.org/jacarooney/sketches/qoDUv6USR</a>`,
+    `Thus far, this sketch has given me the most grief. Not satisfied with a simple <a target="_blank" href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a> style generator, I wanted to work out how to make shapes similar to <a target="_blank" href="https://www.youtube.com/shorts/b7IVgNh5PeU?app=desktop">this.</a><br><br>Using a hexagonal grid, an algorithm to generate the pattern for each face, and the oh-so-terrible columns that weave in and out of the faces (creating the illusion), I've landed on something I'm happy with!<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/B0vIRop39">https://editor.p5js.org/jacarooney/sketches/B0vIRop39</a>`
 ]
 
 let prompts = [
@@ -268,7 +269,7 @@ function goCanvas(i){
 }
 
 var urlHash = location.hash;
-var currentDay = 4;
+var currentDay = 5;
 
 if (urlHash && urlHash != '#home'){
     let num = urlHash.slice(-1);
