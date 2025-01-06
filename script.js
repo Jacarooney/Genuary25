@@ -132,11 +132,11 @@ function removeClass(Id, className) {
     element.classList.remove(className);
 }
 
-let bgCols = ['light', 'light', 'dark', 'dark', 'dark'];
+let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light'];
 
-let titleCols = ['black', 'black', 'white', 'white', 'white'];
+let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black'];
 
-let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures"];
+let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer"];
 
 let blurbs = [
     `This prompt made me think of drawings composed of only vertical lines. Snooping around the web, I found <a target="_blank" href="https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/449775586_17982303353693950_1649366445359233739_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTUuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=uxFHuyjB3fwQ7kNvgFtOasu&_nc_gid=22dccbc30fb347adad556d8c977a07fa&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzQwNDYzMTc5NTg4NDcyOTc4Mg%3D%3D.3-ccb7-5&oh=00_AYB2DXKJg13vTtopCl8r_A10M_RPHEwfQYk0_p7RfPGUNg&oe=6778AC8D&_nc_sid=10d13b">a cool drawing</a> by <a target="_blank" href="https://www.threads.net/@jimmywongstudio">Jimmy Wong</a>.<br><br>I went for a more simplified approach to textures, but tried to capture the general gist of his composition. Click on the sketch to generate a new, random iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2"> https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2</a>`,
@@ -144,7 +144,10 @@ let blurbs = [
     `This one is quite self-explanatory. Forty-two polynucleotide strands. Twenty-one helices of DNA floatin' around.<br><br>But this was no cop-out! The source code is exactly 42 lines long!<br><br>Look-a here:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/MTldScyPC">https://editor.p5js.org/jacarooney/sketches/MTldScyPC</a>`,
     `"I would like to say to those who think of my pictures as serene, whether in friendship or mere observation, that I have imprisoned the most utter violence in every inch of their surface." ― Mark Rothko<br><br>I don't think my code is imbuing it's output with utter violence...<br><br>
 ...gee, I sure hope it isn't.<br><br>Anyways, this one was obviously inspired by Rothko. Click the canvas to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/qoDUv6USR">https://editor.p5js.org/jacarooney/sketches/qoDUv6USR</a>`,
-    `Thus far, this sketch has given me the most grief. Not satisfied with a simple <a target="_blank" href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a>-style generator, I wanted to work out how to make shapes similar to <a target="_blank" href="https://www.youtube.com/shorts/b7IVgNh5PeU?app=desktop">this.</a><br><br>Using a hexagonal grid, an algorithm to generate the pattern for each face, and the oh-so-terrible columns that weave in and out of the faces (creating the illusion), I've landed on something I'm happy with!<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/B0vIRop39">https://editor.p5js.org/jacarooney/sketches/B0vIRop39</a>`
+    `Thus far, this sketch has given me the most grief. Not satisfied with a simple <a target="_blank" href="https://en.wikipedia.org/wiki/Penrose_triangle">Penrose triangle</a>-style generator, I wanted to work out how to make shapes similar to <a target="_blank" href="https://www.youtube.com/shorts/b7IVgNh5PeU?app=desktop">this.</a><br><br>Using a hexagonal grid, an algorithm to generate the pattern for each face, and the oh-so-terrible columns that weave in and out of the faces (creating the illusion), I've landed on something I'm happy with!<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/B0vIRop39">https://editor.p5js.org/jacarooney/sketches/B0vIRop39</a>`,
+    `Thinking of artworks which use primitive shapes, I searched for some children’s drawings and came across <a target="_blank" href="https://artprojectsforkids.org/wp-content/uploads/2022/09/Draw-an-Easy-Landscape.jpg">this</a>.<br><br>I recreated it with primitive shapes, replacing the clouds with (a much simpler) sun. I then parameterised each element of the composition... and it looked quite bad.<br><br>Perhaps not in the spirit of the prompt, I overlaid an image for texture, and used some SVG turbulence to give the sketch a hand-drawn feel.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/uZ-hcSsjZ">https://editor.p5js.org/jacarooney/sketches/uZ-hcSsjZ</a>`,
+    `Inspired by <a target=“_blank” href=“https://www.youtube.com/watch?v=G2hR0JtLYIc”>GLASYS</a> and the many that have come before him. I wanted to give piano roll art a try... but why put in all the work figuring out how to make MIDI drawings sound good when I can make the computer do it for me?<br><br>This sketch works by scanning the points that make up the characters in five-letter words, converting them to MIDI, and sending them out to your computer’s MIDI bus. To hear it in action, you will need to open up a program that accepts MIDI input. I’d recommend opening <a target="_blank" href="https://midi.city">midi.city</a> in another tab, and choosing a sound you like!<br><br>You can also see it in action in my instagram <a target=“_blank” href=“midi.city>post</a>.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/QQYjWEVH5">https://editor.p5js.org/jacarooney/sketches/QQYjWEVH5</a>`,
+    ``
 ]
 
 let prompts = [
@@ -269,7 +272,7 @@ function goCanvas(i){
 }
 
 var urlHash = location.hash;
-var currentDay = 5;
+var currentDay = document.getElementsByClassName("active").length;
 
 if (urlHash && urlHash != '#home'){
     let num = urlHash.slice(-1);
