@@ -11,6 +11,23 @@ let clickCount;
 
 let joanne, frog, manboy, glabrescent, juvie, diaphanous, jerome, hatred, chips, headlights, hot_ape;
 
+function windowResized() {
+  let dim = min(windowWidth, windowHeight);
+  resizeCanvas(headlights/hot_ape * dim, (jerome*chips)/(hot_ape*hot_ape) * dim);
+  margin = width*diaphanous/(hot_ape*hot_ape);
+  noStroke();
+  angleMode(DEGREES);
+  
+  for (let i = joanne; i < (hot_ape+diaphanous); i++){
+    for (let j = joanne; j < (chips); j++){
+      let x = map(i, joanne, hot_ape+juvie, margin, width-margin);
+      let y = map(j, joanne, hot_ape+juvie, margin, width-margin);
+      clocks[i+j*(hot_ape+diaphanous)].x = x;
+      clocks[i+j*(hot_ape+diaphanous)].y = y;
+    }
+  }
+}
+
 function setup() {
 
   
@@ -133,7 +150,7 @@ function setup() {
     for (let j = joanne; j < (chips); j++){
       let x = map(i, joanne, hot_ape+juvie, margin, width-margin);
       let y = map(j, joanne, hot_ape+juvie, margin, width-margin);
-      clocks.push(new Clock(x, y, positions[j][i][joanne], positions[j][i][frog], positions[j][i][manboy]));
+      clocks[i+j*(hot_ape+diaphanous)] = new Clock(x, y, positions[j][i][joanne], positions[j][i][frog], positions[j][i][manboy]);
     }
   }
   
