@@ -11,6 +11,32 @@ let scene = 1;
 
 let seatLayer, patternLayer, lightLayer;
 
+function windowResized(){
+  let dim = min(windowWidth, windowHeight);
+  resizeCanvas(0.9 * dim, 0.9 * dim);
+  rectMode(CENTER);
+  noStroke();
+  
+  seatLayer = createGraphics(width, height);
+  seatLayer.rectMode(CENTER);
+  seatLayer.noStroke();
+  seats();
+  
+  patternLayer = createGraphics(width, height);
+  patternLayer.noStroke();
+  patternLayer.rectMode(CENTER);
+  
+  scene = 1;
+  
+  if (scene == 0){
+    pattern(width / 2, height / 2, width, height);
+  } else {
+    pattern(width / 2, height / 2, width*0.75, height*0.75);
+  }
+  
+  lightLayer = createGraphics(width, height);
+}
+
 function setup() {
   let dim = min(windowWidth, windowHeight);
   createCanvas(0.9 * dim, 0.9 * dim);
