@@ -132,12 +132,12 @@ function removeClass(Id, className) {
     element.classList.remove(className);
 }
 
-let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark',
+let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark',
 ];
 
-let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white'];
+let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white'];
 
-let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug"];
+let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It"];
 
 let blurbs = [
     `This prompt made me think of drawings composed of only vertical lines. Snooping around the web, I found <a target="_blank" href="https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/449775586_17982303353693950_1649366445359233739_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTUuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=uxFHuyjB3fwQ7kNvgFtOasu&_nc_gid=22dccbc30fb347adad556d8c977a07fa&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzQwNDYzMTc5NTg4NDcyOTc4Mg%3D%3D.3-ccb7-5&oh=00_AYB2DXKJg13vTtopCl8r_A10M_RPHEwfQYk0_p7RfPGUNg&oe=6778AC8D&_nc_sid=10d13b">a cool drawing</a> by <a target="_blank" href="https://www.threads.net/@jimmywongstudio">Jimmy Wong</a>.<br><br>I went for a more simplified approach to textures, but tried to capture the general gist of his composition. Click on the sketch to generate a new, random iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2"> https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2</a>`,
@@ -152,7 +152,7 @@ let blurbs = [
     `For this prompt, I've recreated the seat pattern found on <a target="_blank" href="https://ih1.redbubble.net/image.2807633287.0514/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">Sydney Trains</a>.<br><br>Quite simply, I've just recreated the palette, and mapped noise with different thresholds for the different colours.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/hdq27cuB7">https://editor.p5js.org/jacarooney/sketches/hdq27cuB7</a>`,
     `For a subversive take on this prompt, I decided to make a digital clock display inspired by <a target="_blank" href="https://www.humanssince1982.com/en-int/products/a-million-times-120-black">Humans since 1982</a>. You will find no numerals in my code (except for the '2' in the atan2() function)...<br><br>You will also find that I have simply (cheekily?) derived zero-ten using TAU, and given these variables (numbers) silly names.<br><br>Click to switch between an interesting pattern and telling the current time. The time will always display when a minute ticks over.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/LpQIr6FNE">https://editor.p5js.org/jacarooney/sketches/LpQIr6FNE</a>`,
     `I've wanted to try <a target="_blank" href="https://en.wikipedia.org/wiki/Digital_waveguide_synthesis">Waveguide Synthesis</a> for quite some time. This was my opportunity to cram my first attempt into a day. I followed <a target="_blank" href="https://www.osar.fr/notes/waveguides/">Pierre Cusa's</a> incredible explainer, but couldn't manage to implement multiple steps using <a target="_blank" href="https://tonejs.github.io/">Tone.js</a>, especially on limited time. Instead of a flute or recorder, as planned, I offer you this jug (which sounds more EDM than Jug Band...).<br><br>I'd recommend tweaking the delay variable, as that will change the pitch. Reading Cusa's article will help you understand the other parameters if you so wish.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/KiY-dlm8D">https://editor.p5js.org/jacarooney/sketches/KiY-dlm8D</a>`,
-    ``
+    `Originally, I wanted to make an unevenly subdividing chess board with moving pieces... but was short on time. Pretty simple, this one.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/GivRl2nKc">https://editor.p5js.org/jacarooney/sketches/GivRl2nKc</a>`
 ]
 
 let prompts = [
