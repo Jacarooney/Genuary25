@@ -132,12 +132,12 @@ function removeClass(Id, className) {
     element.classList.remove(className);
 }
 
-let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark',
+let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 
 ];
 
-let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white'];
+let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white'];
 
-let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife"];
+let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", ];
 
 let blurbs = [
     `This prompt made me think of drawings composed of only vertical lines. Snooping around the web, I found <a target="_blank" href="https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/449775586_17982303353693950_1649366445359233739_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTUuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=uxFHuyjB3fwQ7kNvgFtOasu&_nc_gid=22dccbc30fb347adad556d8c977a07fa&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzQwNDYzMTc5NTg4NDcyOTc4Mg%3D%3D.3-ccb7-5&oh=00_AYB2DXKJg13vTtopCl8r_A10M_RPHEwfQYk0_p7RfPGUNg&oe=6778AC8D&_nc_sid=10d13b">a cool drawing</a> by <a target="_blank" href="https://www.threads.net/@jimmywongstudio">Jimmy Wong</a>.<br><br>I went for a more simplified approach to textures, but tried to capture the general gist of his composition. Click on the sketch to generate a new, random iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2"> https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2</a>`,
@@ -154,7 +154,8 @@ let blurbs = [
     `I've wanted to try <a target="_blank" href="https://en.wikipedia.org/wiki/Digital_waveguide_synthesis">Waveguide Synthesis</a> for quite some time. This was my opportunity to cram my first attempt into a day. I followed <a target="_blank" href="https://www.osar.fr/notes/waveguides/">Pierre Cusa's</a> incredible explainer, but couldn't manage to implement multiple steps using <a target="_blank" href="https://tonejs.github.io/">Tone.js</a>, especially on limited time. Instead of a flute or recorder, as planned, I offer you this jug (which sounds more EDM than Jug Band...).<br><br>I'd recommend tweaking the delay variable, as that will change the pitch. Reading Cusa's article will help you understand the other parameters if you so wish.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/KiY-dlm8D">https://editor.p5js.org/jacarooney/sketches/KiY-dlm8D</a>`,
     `Originally, I wanted to make an unevenly subdividing chess board with moving pieces... but was short on time. Pretty simple, this one.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/GivRl2nKc">https://editor.p5js.org/jacarooney/sketches/GivRl2nKc</a>`,
     `I'd never tried to implement <a target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> on a non-rectangular grid. Thus... here we are.<br><br>Thanks to <a target="_blank" href="https://www.youtube.com/watch?v=VOQrDh6AvYQ&ab_channel=ChaseMarangu">Chase Marangu</a>, I had some rules I'd know would get interesting results (S:4,5,6 B:4,8). And also to <a target="_blank" href="https://www.boristhebrave.com/2021/05/23/triangle-grids/">Boris The Brave</a> for a very helpful write-up on implementing triangular grids!<br><br>Keyboard controls are listed on the screen; click to toggle cells.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/CPoHNwA-r">https://editor.p5js.org/jacarooney/sketches/CPoHNwA-r</a>`,
-    ``
+    `I've repurposed some old code for this one. A student... 5 or so years ago was trying to achieve a similar effect.<br><br>Move the mouse across the screen and the white dots coalesce into "BLACK" or "WHITE"... not grey/gray.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/l8oYyJyUd">https://editor.p5js.org/jacarooney/sketches/l8oYyJyUd</a>`,
+    
 ]
 
 let prompts = [
