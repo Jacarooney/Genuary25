@@ -1,0 +1,12 @@
+html, body {
+  background-color: rgb(22,24,24);
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);  
+}
