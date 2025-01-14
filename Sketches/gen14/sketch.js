@@ -17,6 +17,8 @@ function setup() {
 function windowResized() {
   let dim = min(windowWidth, windowHeight)*0.8;
   createCanvas(dim,dim);
+  img.resize(width, height);
+  img2.resize(width, height);
 }
 
 function draw() {
