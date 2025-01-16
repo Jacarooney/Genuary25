@@ -132,12 +132,14 @@ function removeClass(Id, className) {
     element.classList.remove(className);
 }
 
-let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark' 
+let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light',  
 ];
 
-let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white'];
+let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black'];
 
-let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs"];
+let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
+              "Gummy Worms", 
+];
 
 let blurbs = [
     `This prompt made me think of drawings composed of only vertical lines. Snooping around the web, I found <a target="_blank" href="https://scontent-syd2-1.cdninstagram.com/v/t39.30808-6/449775586_17982303353693950_1649366445359233739_n.jpg?stp=dst-jpg_e15_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTUuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=uxFHuyjB3fwQ7kNvgFtOasu&_nc_gid=22dccbc30fb347adad556d8c977a07fa&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzQwNDYzMTc5NTg4NDcyOTc4Mg%3D%3D.3-ccb7-5&oh=00_AYB2DXKJg13vTtopCl8r_A10M_RPHEwfQYk0_p7RfPGUNg&oe=6778AC8D&_nc_sid=10d13b">a cool drawing</a> by <a target="_blank" href="https://www.threads.net/@jimmywongstudio">Jimmy Wong</a>.<br><br>I went for a more simplified approach to textures, but tried to capture the general gist of his composition. Click on the sketch to generate a new, random iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2"> https://editor.p5js.org/jacarooney/sketches/ya5qZ8Ud2</a>`,
@@ -156,6 +158,7 @@ let blurbs = [
     `I'd never tried to implement <a target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> on a non-rectangular grid. Thus... here we are.<br><br>Thanks to <a target="_blank" href="https://www.youtube.com/watch?v=VOQrDh6AvYQ&ab_channel=ChaseMarangu">Chase Marangu</a>, I had some rules I'd know would get interesting results (S:4,5,6 B:4,8). And also to <a target="_blank" href="https://www.boristhebrave.com/2021/05/23/triangle-grids/">Boris The Brave</a> for a very helpful write-up on implementing triangular grids!<br><br>Keyboard controls are listed on the screen; click to toggle cells.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/CPoHNwA-r">https://editor.p5js.org/jacarooney/sketches/CPoHNwA-r</a>`,
     `I've repurposed some old code for this one. A student... 5 or so years ago was trying to achieve a similar effect.<br><br>Move the mouse across the screen and the white dots coalesce into "BLACK" or "WHITE"... not grey/gray.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/l8oYyJyUd">https://editor.p5js.org/jacarooney/sketches/l8oYyJyUd</a>`,
     `Here, I've attempted to use the <a target="_blank" href="https://www.youtube.com/watch?v=diGjw5tghYU">Abelian Sandpile Model</a> to mimic the beautiful symmetrical patterns found in/on <a target="_blank" href="https://www.rugart.com.au/wp-content/uploads/2021/12/persian1.jpg">Persian Rugs</a>.<br><br>I've missed the mark, as I'm not happy with how I've programmed the colours... and sometimes the sandpiles don't propagate all the way to the edges.<br><br>Click to generate a new iteration<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/aoW0QM1R-">https://editor.p5js.org/jacarooney/sketches/aoW0QM1R-</a>`,
+    `Searching for generative colour palette inspiration, I came across this article by <a target="_blank" href="https://sam-tsao.medium.com/3-levels-of-generative-colors-b43bd0d6d609">Sam Tsao</a>. They implement their own version of Quayola's <a target="_blank" href="https://vimeo.com/457234035">Transient</a>. They also discuss <a target="_blank" href="https://iquilezles.org/articles/palettes/">Inigo Quilez's</a> trigonometric approach to colour palettes.<br><br>I have simply combined these ideas. Click the canvas to reset, or the gradient strip to change the palette.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h">https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h</a>`
     
 ]
 
