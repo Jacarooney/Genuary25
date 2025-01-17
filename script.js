@@ -133,15 +133,15 @@ function removeClass(Id, className) {
 }
 
 let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
-            'light',
+            'light', 'light', 'light', 
 ];
 
 let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
-            'black',
+            'black', 'black', 'black', 
 ];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
-              "Gummy Worms", "Non-Euclidean Pi", 
+              "Gummy Worms", "Non-Euclidean Pi", "Left Hanging", "Get Your Blaze On", "" 
 ];
 
 let blurbs = [
@@ -163,6 +163,10 @@ let blurbs = [
     `Here, I've attempted to use the <a target="_blank" href="https://www.youtube.com/watch?v=diGjw5tghYU">Abelian Sandpile Model</a> to mimic the beautiful symmetrical patterns found in/on <a target="_blank" href="https://www.rugart.com.au/wp-content/uploads/2021/12/persian1.jpg">Persian Rugs</a>.<br><br>I've missed the mark, as I'm not happy with how I've programmed the colours... and sometimes the sandpiles don't propagate all the way to the edges.<br><br>Click to generate a new iteration<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/aoW0QM1R-">https://editor.p5js.org/jacarooney/sketches/aoW0QM1R-</a>`,
     `Searching for generative colour palette inspiration, I came across this article by <a target="_blank" href="https://sam-tsao.medium.com/3-levels-of-generative-colors-b43bd0d6d609">Sam Tsao</a>. They implement their own version of Quayola's <a target="_blank" href="https://vimeo.com/457234035">Transient</a>. They also discuss <a target="_blank" href="https://iquilezles.org/articles/palettes/">Inigo Quilez's</a> trigonometric approach to colour palettes.<br><br>I have simply combined these ideas. Click the canvas to reset, or the gradient strip to change the palette.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h">https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h</a>`,
     `For this prompt, I wanted to show that Pi (if you consider it to be the ratio of a circle's circumference to its diameter) is not constant in non-euclidean space.<br><br>I don't usually do 3D, so I couldn't really figure out a good approach to make the diameter (orange torus) vary with the circumference (blue). I also considered representing hyperbolic space... but then I considered my sanity.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/oEnr9Y23K">https://editor.p5js.org/jacarooney/sketches/oEnr9Y23K</a>`,
+    `What better to show the wind than clothes on a line?<br><br>For this sketch, I repurposed my first attempt at <a target="_blank" href="https://en.wikipedia.org/wiki/Verlet_integration">Verlet Simulation</a>. It was hard to find a nice balance where the clothes both retained shape, but had plenty of give. You can certainly 'break' the shapes... but that's all part of the fun.<br><br>Moving the mouse to the right adds more wind. Clicking rehangs the line.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/V8yHyAYd8">https://editor.p5js.org/jacarooney/sketches/V8yHyAYd8</a>`,
+    `Looking at notable Op Artists for inspiration, I came across <a target="_blank" href="https://www.wikiart.org/en/bridget-riley/blaze-1-1962">Bridget Riley</a> (whose work I was already familiar with, or at least art influenced by her art). Her <a target="_blank" href="https://www.wikiart.org/en/bridget-riley/blaze-study-1962">'Blaze'</a> artworks seemed to be very fitting for digitisation.<br><br>She preferred to put a 'hole' at the centre of her spirals... but I think Op Artists would enjoy the weird aliasing that occurs in my version.<br><br>Move the mouse to move the spirals. Click for a new spiral.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/HZLANkO6g">https://editor.p5js.org/jacarooney/sketches/HZLANkO6g</a>`,
+    ``,
+    ``,
     ``
 ]
 
