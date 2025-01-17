@@ -132,13 +132,16 @@ function removeClass(Id, className) {
     element.classList.remove(className);
 }
 
-let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light',  
+let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
+            'light',
 ];
 
-let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black'];
+let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
+            'black',
+];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
-              "Gummy Worms", 
+              "Gummy Worms", "Non-Euclidean Pi", 
 ];
 
 let blurbs = [
@@ -158,8 +161,9 @@ let blurbs = [
     `I'd never tried to implement <a target="_blank" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> on a non-rectangular grid. Thus... here we are.<br><br>Thanks to <a target="_blank" href="https://www.youtube.com/watch?v=VOQrDh6AvYQ&ab_channel=ChaseMarangu">Chase Marangu</a>, I had some rules I'd know would get interesting results (S:4,5,6 B:4,8). And also to <a target="_blank" href="https://www.boristhebrave.com/2021/05/23/triangle-grids/">Boris The Brave</a> for a very helpful write-up on implementing triangular grids!<br><br>Keyboard controls are listed on the screen; click to toggle cells.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/CPoHNwA-r">https://editor.p5js.org/jacarooney/sketches/CPoHNwA-r</a>`,
     `I've repurposed some old code for this one. A student... 5 or so years ago was trying to achieve a similar effect.<br><br>Move the mouse across the screen and the white dots coalesce into "BLACK" or "WHITE"... not grey/gray.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/l8oYyJyUd">https://editor.p5js.org/jacarooney/sketches/l8oYyJyUd</a>`,
     `Here, I've attempted to use the <a target="_blank" href="https://www.youtube.com/watch?v=diGjw5tghYU">Abelian Sandpile Model</a> to mimic the beautiful symmetrical patterns found in/on <a target="_blank" href="https://www.rugart.com.au/wp-content/uploads/2021/12/persian1.jpg">Persian Rugs</a>.<br><br>I've missed the mark, as I'm not happy with how I've programmed the colours... and sometimes the sandpiles don't propagate all the way to the edges.<br><br>Click to generate a new iteration<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/aoW0QM1R-">https://editor.p5js.org/jacarooney/sketches/aoW0QM1R-</a>`,
-    `Searching for generative colour palette inspiration, I came across this article by <a target="_blank" href="https://sam-tsao.medium.com/3-levels-of-generative-colors-b43bd0d6d609">Sam Tsao</a>. They implement their own version of Quayola's <a target="_blank" href="https://vimeo.com/457234035">Transient</a>. They also discuss <a target="_blank" href="https://iquilezles.org/articles/palettes/">Inigo Quilez's</a> trigonometric approach to colour palettes.<br><br>I have simply combined these ideas. Click the canvas to reset, or the gradient strip to change the palette.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h">https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h</a>`
-    
+    `Searching for generative colour palette inspiration, I came across this article by <a target="_blank" href="https://sam-tsao.medium.com/3-levels-of-generative-colors-b43bd0d6d609">Sam Tsao</a>. They implement their own version of Quayola's <a target="_blank" href="https://vimeo.com/457234035">Transient</a>. They also discuss <a target="_blank" href="https://iquilezles.org/articles/palettes/">Inigo Quilez's</a> trigonometric approach to colour palettes.<br><br>I have simply combined these ideas. Click the canvas to reset, or the gradient strip to change the palette.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h">https://editor.p5js.org/jacarooney/sketches/Ee6TMtp4h</a>`,
+    `For this prompt, I wanted to show that Pi (if you consider it to be the ratio of a circle's circumference to its diameter) is not constant in non-euclidean space.<br><br>I don't usually do 3D, so I couldn't really figure out a good approach to make the diameter (orange torus) vary with the circumference (blue). I also considered representing hyperbolic space... but then I considered my sanity.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/oEnr9Y23K">https://editor.p5js.org/jacarooney/sketches/oEnr9Y23K</a>`,
+    ``
 ]
 
 let prompts = [
