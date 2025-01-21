@@ -133,16 +133,16 @@ function removeClass(Id, className) {
 }
 
 let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
-            'light', 'light', 'light', 'light', 
+            'light', 'light', 'light', 'light', 'dark', ''
 ];
 
 let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
-            'black', 'black', 'black', 'black', ''
+            'black', 'black', 'black', 'black', 'white', ''
 ];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
               "Gummy Worms", "Non-Euclidean Pi", "Left Hanging", "Get Your Blaze On", "Small Plans", 
-              "" 
+              "Deformities" 
 ];
 
 let blurbs = [
@@ -167,7 +167,7 @@ let blurbs = [
     `What better to show the wind than clothes on a line?<br><br>For this sketch, I repurposed my first attempt at <a target="_blank" href="https://en.wikipedia.org/wiki/Verlet_integration">Verlet Simulation</a>. It was hard to find a nice balance where the clothes both retained shape, but had plenty of give. You can certainly 'break' the shapes... but that's all part of the fun.<br><br>Moving the mouse to the right adds more wind. Clicking rehangs the line.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/V8yHyAYd8">https://editor.p5js.org/jacarooney/sketches/V8yHyAYd8</a>`,
     `Looking at notable Op Artists for inspiration, I came across <a target="_blank" href="https://www.wikiart.org/en/bridget-riley/blaze-1-1962">Bridget Riley</a> (whose work I was already familiar with, or at least art influenced by her art). Her <a target="_blank" href="https://www.wikiart.org/en/bridget-riley/blaze-study-1962">'Blaze'</a> artworks seemed to be very fitting for digitisation.<br><br>She preferred to put a 'hole' at the centre of her spirals... but I think Op Artists would enjoy the weird aliasing that occurs in my version.<br><br>Move the mouse to move the spirals. Click for a new spiral.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/HZLANkO6g">https://editor.p5js.org/jacarooney/sketches/HZLANkO6g</a>`,
     `When I get the itch to make something generative and need some inspiration (or just want to practice my skills), I often go to <a target="_blank" href="https://inconvergent.net/">Anders Hoff's website</a>.<br><br>This prompt was the perfect opportunity to try to recreate one of his sketches I've had my eye on: <a target="_blank" href="https://inconvergent.net/app/impossible-architecture/">Impossible Architecture</a>. Lucky for me, he also has a <a target="_blank" href="https://inconvergent.net/2018/impossible-architecture">write-up</a> on his approach!<br><br>Starting with a square, lines will lerp outward with a chance of incorporating a feature (circle/thick line/row of lines). Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/5_KTn1Ed-">https://editor.p5js.org/jacarooney/sketches/5_KTn1Ed-</a>`,
-    ``,
+    `This sketch was inspired by <a target="_blank" href="https://x.com/kusakarism/status/1791845845203382491">Kusakari's work</a>. In contrast to Prompt 20, I wanted to avoid reading/following any materials/tutorials to try and achieve a similar result. Thus, I have this weird and inaccurate collision/deformation system.<br><br>Rectangles are constructed with circles. These circles are repulsed by one another, but are elastically connected to orthogonal neighbours.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/yeD56D3_p">https://editor.p5js.org/jacarooney/sketches/yeD56D3_p</a>`,
     ``
 ]
 
