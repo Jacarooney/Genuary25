@@ -133,16 +133,16 @@ function removeClass(Id, className) {
 }
 
 let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
-            'light', 'light', 'light', 'light', 'dark', 'dark', '', '', '', '', '', '', '', '', ''
+            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', '', '', '', '', '', '', '', ''
 ];
 
 let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
-            'black', 'black', 'black', 'black', 'white', 'white', '', '', '', '', '', '', '', '', ''
+            'black', 'black', 'black', 'black', 'white', 'white', 'black', '', '', '', '', '', '', '', ''
 ];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
               "Gummy Worms", "Non-Euclidean Pi", "Left Hanging", "Get Your Blaze On", "Small Plans", 
-              "Deformities", "Ten Lights", "", "", "", "", "", "", "", "", "" 
+              "Deformities", "Ten Lights", "Musée Concréte", "", "", "", "", "", "", "", "" 
 ];
 
 let blurbs = [
@@ -169,7 +169,7 @@ let blurbs = [
     `When I get the itch to make something generative and need some inspiration (or just want to practice my skills), I often go to <a target="_blank" href="https://inconvergent.net/">Anders Hoff's website</a>.<br><br>This prompt was the perfect opportunity to try to recreate one of his sketches I've had my eye on: <a target="_blank" href="https://inconvergent.net/app/impossible-architecture/">Impossible Architecture</a>. Lucky for me, he also has a <a target="_blank" href="https://inconvergent.net/2018/impossible-architecture">write-up</a> on his approach!<br><br>Starting with a square, lines will lerp outward with a chance of incorporating a feature (circle/thick line/row of lines). Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/5_KTn1Ed-">https://editor.p5js.org/jacarooney/sketches/5_KTn1Ed-</a>`,
     `This sketch was inspired by <a target="_blank" href="https://x.com/kusakarism/status/1791845845203382491">Kusakari's work</a>. In contrast to Prompt 20, I wanted to avoid reading/following any materials/tutorials to try and achieve a similar result. Thus, I have this weird and inaccurate collision/deformation system.<br><br>Rectangles are constructed with circles. These circles are repulsed by one another, but are elastically connected to orthogonal neighbours.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/yeD56D3_p">https://editor.p5js.org/jacarooney/sketches/yeD56D3_p</a>`,
     `This sketch is inspired by <a target="_blank" href="https://www.artnet.com/artists/leon-berkowitz/">Leon Berkowitz's</a> artworks. He'd paint beautiful gradients, often in the form of other-worldly orbs, seeming to float across the canvas, bleeding into one-another.<br><br>I've tried to get a similar effect by using randomly distributed points within ellipses, that shift colour and shape as they move, slowly revealing the 'painting'.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/GatVdncHG">https://editor.p5js.org/jacarooney/sketches/GatVdncHG</a>`,
-    ``,
+    `This sketch joins boxy, Brutalist-inspired modules on a grid according to some basic rules.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/vE5rhx9Jy">https://editor.p5js.org/jacarooney/sketches/vE5rhx9Jy</a>`,
     ``,
     ``,
     ``,
