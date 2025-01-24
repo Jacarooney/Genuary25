@@ -133,16 +133,16 @@ function removeClass(Id, className) {
 }
 
 let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
-            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', '', '', '', '', '', '', '', ''
+            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', 'light', '', '', '', '', '', '', ''
 ];
 
 let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
-            'black', 'black', 'black', 'black', 'white', 'white', 'black', '', '', '', '', '', '', '', ''
+            'black', 'black', 'black', 'black', 'white', 'white', 'black', 'black', '', '', '', '', '', '', ''
 ];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
               "Gummy Worms", "Non-Euclidean Pi", "Left Hanging", "Get Your Blaze On", "Small Plans", 
-              "Deformities", "Ten Lights", "Musée Concréte", "", "", "", "", "", "", "", "" 
+              "Deformities", "Ten Lights", "Musée Concréte", "Compositions in Red, Blue, and Yellow", "", "", "", "", "", "", "" 
 ];
 
 let blurbs = [
@@ -170,7 +170,7 @@ let blurbs = [
     `This sketch was inspired by <a target="_blank" href="https://x.com/kusakarism/status/1791845845203382491">Kusakari's work</a>. In contrast to Prompt 20, I wanted to avoid reading/following any materials/tutorials to try and achieve a similar result. Thus, I have this weird and inaccurate collision/deformation system.<br><br>Rectangles are constructed with circles. These circles are repulsed by one another, but are elastically connected to orthogonal neighbours.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/yeD56D3_p">https://editor.p5js.org/jacarooney/sketches/yeD56D3_p</a>`,
     `This sketch is inspired by <a target="_blank" href="https://www.artnet.com/artists/leon-berkowitz/">Leon Berkowitz's</a> artworks. He'd paint beautiful gradients, often in the form of other-worldly orbs, seeming to float across the canvas, bleeding into one-another.<br><br>I've tried to get a similar effect by using randomly distributed points within ellipses, that shift colour and shape as they move, slowly revealing the 'painting'.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/GatVdncHG">https://editor.p5js.org/jacarooney/sketches/GatVdncHG</a>`,
     `This sketch joins boxy, Brutalist-inspired modules on a grid according to some basic rules.<br><br>Click to generate a new iteration.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/vE5rhx9Jy">https://editor.p5js.org/jacarooney/sketches/vE5rhx9Jy</a>`,
-    ``,
+    `Although well-trodden territory by generative artists, I wanted to have a go at recreating <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/c/c3/Composition_A_by_Piet_Mondrian_Galleria_Nazionale_d%27Arte_Moderna_e_Contemporanea.jpg">Mondrian's famous compositions</a>. My approach is to have one rectangle traverse the canvas, interpolating to a new colour and new dimensions, placing copies of itself until a composition is complete.<br><br>Click the canvas at any time to restart the process.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/LXkEemFzw">https://editor.p5js.org/jacarooney/sketches/LXkEemFzw</a>`,
     ``,
     ``,
     ``,
@@ -204,7 +204,7 @@ let prompts = [
     "Create a collision detection system (no libraries allowed).",
     "Gradients only.",
     "Inspired by brutalism.",
-    "Geometric art - pick either a circle, rectangle, or triangle and use only that geometric shape.",
+    "Geometric art - only use either a circle, rectangle, or triangle.",
     "One line that may or may not intersect itself",
     "Symmetry.",
     "Make something interesting with no randomness or noise or trig.",
