@@ -133,17 +133,17 @@ function removeClass(Id, className) {
 }
 
 let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
-            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', 'light', 'dark', 'dark', '', '', '', '', ''
+            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', 'light', 'dark', 'dark', 'light', '', '', '', ''
 ];
 
 let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
-            'black', 'black', 'black', 'black', 'white', 'white', 'black', 'black', 'white', 'white', '', '', '', '', ''
+            'black', 'black', 'black', 'black', 'white', 'white', 'black', 'black', 'white', 'white', 'black', '', '', '', ''
 ];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
               "Gummy Worms", "Non-Euclidean Pi", "Left Hanging", "Get Your Blaze On", "Small Plans", 
               "Deformities", "Ten Lights", "Musée Concréte", "Compositions in Red, Blue, and Yellow", "Doodle Stars", 
-              "Anadromic Squares", "", "", "", "", "" 
+              "Anadromic Squares", "LeWitt's Walls", "", "", "", "" 
 ];
 
 let blurbs = [
@@ -174,7 +174,7 @@ let blurbs = [
     `Although well-trodden territory by generative artists, I wanted to have a go at recreating <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/c/c3/Composition_A_by_Piet_Mondrian_Galleria_Nazionale_d%27Arte_Moderna_e_Contemporanea.jpg">Mondrian's famous compositions</a>. My approach is to have one rectangle traverse the canvas, interpolating to a new colour and new dimensions, placing copies of itself until a composition is complete.<br><br>Click the canvas at any time to restart the process.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/LXkEemFzw">https://editor.p5js.org/jacarooney/sketches/LXkEemFzw</a>`,
     `A continuous line roughly traces out (then un-traces) some stars... and again... forever.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/9TLQd4RuG">https://editor.p5js.org/jacarooney/sketches/9TLQd4RuG</a>`,
     `Originally, this prompt got me thinking about crosswords, as they are traditionally set on <a target="_blank" href="https://en.wikipedia.org/wiki/Crossword">symmetric grids</a>. However, making a crossword generator (with words and clues) was obviously too much work for a day.<br><br>Instead, I have taken inspiration from the <a target="_blank" href="https://en.wikipedia.org/wiki/Sator_Square">Sator Square</a>, and have made a Word Square generator using all valid 4-letter anadromes (words that work both forward and backward).<br><br>Click to reset the grid.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/rmJTR2AAr">https://editor.p5js.org/jacarooney/sketches/rmJTR2AAr</a>`,
-    ``,
+    `One of the courses I teach includes a challenge for students to implement one of <a target="_blank" href="https://en.wikipedia.org/wiki/Sol_LeWitt">Sol LeWitt's</a> Wall Drawings. These are artworks that LeWitt would not necessarily 'complete' himself, but instead supplied a set of instructions for. These instructions could/can then be carried out by whoever (often those working at galleries that have procured his instructions).<br><br>I have implemented Wall Drawings <a target="_blank" href="https://massmoca.org/event/walldrawing16/">#16</a>, <a target="_blank" href="https://massmoca.org/event/walldrawing138/">#138</a> & <a target="_blank" href="https://massmoca.org/event/walldrawing340/">#340</a>. I had some others I wanted to attempt, but the restriction on trigonometry made them extremely hard (and unsatisfying).<br><br>Click and hold to see each artwork's title and instructions.<br><br>Source code:<br><a target="_blank" href="https://editor.p5js.org/jacarooney/sketches/XP1PrTXob">https://editor.p5js.org/jacarooney/sketches/XP1PrTXob</a>`,
     ``,
     ``,
     ``,
