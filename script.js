@@ -133,17 +133,17 @@ function removeClass(Id, className) {
 }
 
 let bgCols = ['light', 'light', 'dark', 'dark', 'dark', 'light', 'light', 'light', 'light', 'dark', 'dark', 'dark', 'dark', 'dark', 'dark', 'light', 
-            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', 'light', 'dark', 'dark', 'light', 'dark', 'dark', '', ''
+            'light', 'light', 'light', 'light', 'dark', 'dark', 'light', 'light', 'dark', 'dark', 'light', 'dark', 'dark', 'dark', ''
 ];
 
 let titleCols = ['black', 'black', 'white', 'white', 'white', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white', 'white', 'white', 'black',
-            'black', 'black', 'black', 'black', 'white', 'white', 'black', 'black', 'white', 'white', 'black', 'white', 'white', '', ''
+            'black', 'black', 'black', 'black', 'white', 'white', 'black', 'black', 'white', 'white', 'black', 'white', 'white', 'white', ''
 ];
 
 let titles = ["Castle Ruins", "Larry Layers", "Twenty-One Helices", "Untitled (Black, Black, Bl...)", "Undecidable Figures", "Fridge Fodder", "Piano Roll Printer", "Porpoise Portraits", "Train Noise", "Tau Since 1982","Jug","Check It", "Game of Trife", "Hither and Dither", "Pixel Persian Rugs", 
               "Gummy Worms", "Non-Euclidean Pi", "Left Hanging", "Get Your Blaze On", "Small Plans", 
               "Deformities", "Ten Lights", "Musée Concréte", "Compositions in Red, Blue, and Yellow", "Doodle Stars", 
-              "Anadromic Squares", "LeWitt's Walls", "Drostetubbies", "Grid-o-matic", "", "" 
+              "Anadromic Squares", "LeWitt's Walls", "Drostetubbies", "Grid-o-matic", "No Train, No Gain", "" 
 ];
 
 let blurbs = [
